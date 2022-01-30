@@ -247,10 +247,10 @@
     ["pokemonstore"] = {
         ["label"] = "Pokemon Shop",
         ["coords"] = {
-            [1] = vector3(-140.2, 224.75, 94.99)
+            [1] = vector3(-143.97, 229.66, 94.95)
         },
         ["products"] = Config.Products["pokemon"],
-        ["showblip"] = false, -- True if you want to see blips
+        ["showblip"] = false,
         ["blipsprite"] = 52
     },
 ```
