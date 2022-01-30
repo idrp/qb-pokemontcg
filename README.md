@@ -4,8 +4,8 @@
 - [mspeds](https://github.com/MiddleSkillz/ms-peds) 
 - [menuv](https://github.com/qbcore-framework/menuv)
 - [Interactsound](https://github.com/plunkettscott/interact-sound)
-- [qb-inventory(qbcore)](https://github.com/qbcore-framework/qb-inventory) 
-- [lj-inventory(optional)](https://github.com/loljoshie/lj-inventory)
+- [qb-inventory](https://github.com/qbcore-framework/qb-inventory) (qb-core)
+- [lj-inventory](https://github.com/loljoshie/lj-inventory) (optional)
 - [mlo arcade-bar](https://forum.cfx.re/t/free-mlo-arcade-bar-interior/4808151) 
 
 ## Must have below added to qb-inventory for the box to have its own stash (This stash holds anything with 0 weight so make sure to have anything else that weighs 0 = 1 or something.) ##
