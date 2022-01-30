@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject() 
 local assert = assert
 local MenuV = assert(MenuV)
 
@@ -21,18 +22,18 @@ function CreateBlips()
             EndTextCommandSetBlipName(blip)
         end
 
-        for k, v in pairs(Config.CardshopLocation) do
-            local blip = AddBlipForCoord(v.location)
-            SetBlipAsShortRange(blip, true)
-            SetBlipSprite(blip, 500)
-            SetBlipColour(blip, 2)
-            SetBlipScale(blip, 0.7)
-            SetBlipDisplay(blip, 6)
+        -- for k, v in pairs(Config.CardshopLocation) do
+        --     local blip = AddBlipForCoord(v.location)
+        --     SetBlipAsShortRange(blip, true)
+        --     SetBlipSprite(blip, 500)
+        --     SetBlipColour(blip, 2)
+        --     SetBlipScale(blip, 0.7)
+        --     SetBlipDisplay(blip, 6)
 
-            BeginTextCommandSetBlipName('STRING')
-            AddTextComponentString(v.label)
-            EndTextCommandSetBlipName(blip)
-        end
+        --     BeginTextCommandSetBlipName('STRING')
+        --     AddTextComponentString(v.label)
+        --     EndTextCommandSetBlipName(blip)
+        -- end
     end
 
 Citizen.CreateThread(function()
@@ -56,8 +57,8 @@ Citizen.CreateThread(function()
             local distance = #(playerCoords - loc)
             if distance < 2.5 then
                 sleep = false
-                DisplayTooltip('Sell Items')
-                if IsControlJustPressed(1, 38) then
+            --    DisplayTooltip('Sell Items')
+                if IsControlJustPressed(1, 94) then
                     TriggerEvent('Cards:client:openMenu')
                     end
                 end
@@ -70,7 +71,7 @@ Citizen.CreateThread(function()
                 sleep = false
                 DisplayTooltip('Trade for a '..v.label)
                 if IsControlJustPressed(1, 38) then
-            TriggerServerEvent('Cards:server:badges', k)
+                    TriggerServerEvent('Cards:server:badges', k)
                 end
             end
         end
@@ -255,3 +256,39 @@ menu_button:On('select', function(item)
         end
     end)
 end)
+
+
+exports['qb-target']:AddBoxZone("Pokemon1", vector3(-1282.35, -296.78, 37.65), 1, 1, {
+    name="Pokemon1",
+    heading=295,
+    debugPoly=false,
+    minZ=36.15,
+    maxZ=38.55
+}, {
+    options = {
+        {
+            event = "Cards:client:openMenu",
+            icon = "Fas Fa-Globe",
+            label = "Sell Cards",
+        },
+    },
+    distance = 1.7
+})
+
+
+exports['qb-target']:AddBoxZone("Pokemon2", vector3(-143.97, 229.66, 94.95), 1, 1,  {
+    name="Pokemon2",
+    heading=0,
+    debugPoly=false,
+    minZ=93.95,
+    maxZ=95.75
+}, {
+    options = {
+        {
+            event = "qb-shops:marketshop",
+            icon = "Fas Fa-Globe",
+            label = "Buy Cards",
+        },
+    },
+    distance = 1.7
+})

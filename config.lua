@@ -2,8 +2,8 @@ Config = {}
 
 Config.CardshopLocation =  {
 	['Cardshop'] = {
-		location = vector3(174.08, -1321.79, 29.36),
-		label = 'TCG Shop - Sell Cards'
+		location = vector3(-1282.33, -296.78, 37.65),
+		label = 'Sell Cards'
 	},
 }
 
