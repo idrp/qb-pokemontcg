@@ -3,6 +3,15 @@
 ### qb-inventory - https://github.com/qbcore-framework/qb-inventory ### Any other inventory should work with this update now
 ### Interactsound - https://github.com/plunkettscott/interact-sound ###
 ### menuv - https://github.com/qbcore-framework/menuv ###
+## Dependencies
+- [qb-core](https://github.com/qbcore-framework/qb-core)
+- [qb-target](https://github.com/BerkieBb/qb-target) (optional)
+- [mspeds](https://github.com/MiddleSkillz/ms-peds) 
+- [menuv](https://github.com/qbcore-framework/menuv)
+- [Interactsound](https://github.com/plunkettscott/interact-sound)
+- [qb-inventory(qbcore)](https://github.com/qbcore-framework/qb-inventory) 
+- [lj-inventory(optional)](https://github.com/loljoshie/lj-inventory)
+- [mlo arcade-bar](https://forum.cfx.re/t/free-mlo-arcade-bar-interior/4808151) 
 
 ## Must have below added to qb-inventory for the box to have its own stash (This stash holds anything with 0 weight so make sure to have anything else that weighs 0 = 1 or something.) ##
 
@@ -188,23 +197,70 @@
 ["rainbowvmaxpikachu"] 			 = {["name"] = "rainbowvmaxpikachu", 			["label"] = "Rainbow Pikachu", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "rainbowvmaxpikachu.png", 	["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,       ["combinable"] = nil,   ["description"] = "Rainbow Card"},
 ["snorlaxvmaxrainbow"] 			 = {["name"] = "snorlaxvmaxrainbow", 			["label"] = "Rainbox Snorlax", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "snorlaxvmaxrainbow.png", 	["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,       ["combinable"] = nil,   ["description"] = "Rainbow Card"},
 ["pokebox"] 					 = {["name"] = "pokebox", 						["label"] = "Pokemon TCG Box", 			["weight"] = 50, 		["type"] = "item", 		["image"] = "pokebox.png", 				["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true, 	   ["combinable"] = nil,  ["description"] = "Pokemon TCG Storage Box"},
+```
+### MSPEDS ###
+```
+	----------------------------------------
+	---         PokeMon           ---
+	----------------------------------------
+	{
+		model = `u_m_m_streetart_01`, -- Model name as a hash.
+		coords = vector4(-1282.33, -296.78, 37.65, 292.29), -- Hawick Ave (X, Y, Z, Heading)
+		gender = 'male' -- The gender of the ped, used for the CreatePed native.
+	},
+	{
+		model = `u_m_m_jesus_01`, -- Model name as a hash.
+		coords = vector4(-143.92, 229.75, 94.94, 352.73), -- Hawick Ave (X, Y, Z, Heading)
+		gender = 'male' -- The gender of the ped, used for the CreatePed native.
+	},
+}
 
 ```
-## you may change shop location coords or the maps that i use for the shops are linked below ##
+### qb-target with pokemon shops ###
+ You will need to remove the drawtext in qb-shops if you dont want the drawtext to show up.
 
-https://www.youtube.com/watch?v=KSfuP583gV8&feature=youtu.be
+ If you dont want to use the qb-target go to client.lua in qb-pokemontcg and remove the exports at the bottom.
+## qb-shop locations (Buy Location) ### 
+```
+    ["pokemon"] = {
+        [1] = {
+            name = 'boosterpack',
+            price = 1000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 1,
+        },
+        [2] = {
+            name = 'boosterbox',
+            price = 7500,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 3,
+        },
+        [3] = {
+            name = 'pokebox',
+            price = 3500,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 3,
+        }
+    },
 
-the pawnshop map can be purchased in this discord https://discord.com/invite/JrjkacM
+    ["pokemonstore"] = {
+        ["label"] = "Pokemon Shop",
+        ["coords"] = {
+            [1] = vector3(-140.2, 224.75, 94.99)
+        },
+        ["products"] = Config.Products["pokemon"],
+        ["showblip"] = false, -- True if you want to see blips
+        ["blipsprite"] = 52
+    },
+```
 
-I'd Like to also point out that I am not to be recognized as sole creator of this project.
 
-I am still learning and got tons of help from a great team of guys!
+## Original qb-pokemontcg
 
-Big thanks to anyone that helped me if you want any sort of individual recognition say the word!
-
-
-Join https://discord.gg/3j9b439TeY  to recieve support or to show some love! 
-
-Card icons and inspiration from DaddyAF#8312
-Pokebox and Optimization @Kmack710 
-
+- [qb-pokemontcg](https://github.com/KamuiKody/qb-pokemontcg)
