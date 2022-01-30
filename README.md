@@ -1,8 +1,3 @@
-## Dependencies  ##
-### QBCore - https://github.com/qbcore-framework/qb-core ###
-### qb-inventory - https://github.com/qbcore-framework/qb-inventory ### Any other inventory should work with this update now
-### Interactsound - https://github.com/plunkettscott/interact-sound ###
-### menuv - https://github.com/qbcore-framework/menuv ###
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 - [qb-target](https://github.com/BerkieBb/qb-target) (optional)
