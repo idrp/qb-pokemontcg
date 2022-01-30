@@ -255,6 +255,8 @@
     },
 ```
 
+### Copy the images Dont delete the images from the pokemontcg html file ###
+
 
 ## Original qb-pokemontcg
 
