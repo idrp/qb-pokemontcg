@@ -232,7 +232,7 @@
             amount = 10,
             info = {},
             type = 'item',
-            slot = 3,
+            slot = 2,
         },
         [3] = {
             name = 'pokebox',
