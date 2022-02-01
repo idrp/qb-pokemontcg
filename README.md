@@ -6,8 +6,7 @@
 - [Interactsound](https://github.com/plunkettscott/interact-sound)
 - [qb-inventory](https://github.com/qbcore-framework/qb-inventory) (qb-core)
 - [lj-inventory](https://github.com/loljoshie/lj-inventory) (optional)
-- [mlo arcade-bar](https://forum.cfx.re/t/free-mlo-arcade-bar-interior/4808151) 
-
+- (updating mlo & location)
 ## Must have below added to qb-inventory for the box to have its own stash (This stash holds anything with 0 weight so make sure to have anything else that weighs 0 = 1 or something.) ##
 
 
