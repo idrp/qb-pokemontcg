@@ -258,9 +258,9 @@ menu_button:On('select', function(item)
 end)
 
 
-exports['qb-target']:AddBoxZone("Pokemon1", vector3(-1282.35, -296.78, 37.65), 1, 1, {
+exports['qb-target']:AddBoxZone("Pokemon1", vector3(337.53, -930.37, 29.25), 1, 1, {
     name="Pokemon1",
-    heading=295,
+    heading=339.64,
     debugPoly=false,
     minZ=36.15,
     maxZ=38.55

@@ -6,12 +6,12 @@
 - [Interactsound](https://github.com/plunkettscott/interact-sound)
 - [qb-inventory](https://github.com/qbcore-framework/qb-inventory) (qb-core)
 - [lj-inventory](https://github.com/loljoshie/lj-inventory) (optional)
-- [mlo arcade-bar](https://forum.cfx.re/t/free-mlo-arcade-bar-interior/4808151) 
+- [mlo cyberbar](https://forum.cfx.re/t/mlo-cyber-bar-v2/4769478) 
 
 ## Must have below added to qb-inventory for the box to have its own stash (This stash holds anything with 0 weight so make sure to have anything else that weighs 0 = 1 or something.) ##
 
 
-# For shared.lua #
+# For shared/item.lua #
 ```lua
 ["boosterbox"] 					 = {["name"] = "boosterbox",		  	  		["label"] = "Boosterbox", 				["weight"] = 200, 		["type"] = "item", 		["image"] = "boosterBox.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "Box Of Card Packs"},
 ["boosterpack"] 				 = {["name"] = "boosterpack", 			  	  	["label"] = "Boosterpack", 				["weight"] = 0, 		["type"] = "item", 		["image"] = "boosterPack.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   ["combinable"] = nil,   ["description"] = "Pack of Cards"},
@@ -200,7 +200,7 @@
 	----------------------------------------
 	{
 		model = `u_m_m_streetart_01`, -- Model name as a hash.
-		coords = vector4(-1282.33, -296.78, 37.65, 292.29), -- Hawick Ave (X, Y, Z, Heading)
+		coords = vector4(337.53, -930.37, 29.25, 339.64), -- Hawick Ave (X, Y, Z, Heading)
 		gender = 'male' -- The gender of the ped, used for the CreatePed native.
 	},
 	{
