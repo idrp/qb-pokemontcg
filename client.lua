@@ -262,8 +262,8 @@ exports['qb-target']:AddBoxZone("Pokemon1", vector3(337.53, -930.37, 29.25), 1, 
     name="Pokemon1",
     heading=339.64,
     debugPoly=false,
-    minZ=36.15,
-    maxZ=38.55
+    minZ=28.15,
+    maxZ=31.55
 }, {
     options = {
         {
