@@ -257,7 +257,11 @@
 
 ### Copy the images Dont delete the images from the pokemontcg html file ###
 
+## Discord
+- [Join Discord](https://discord.gg/zRCdhENsHG)
+
 
 ## Original qb-pokemontcg
 
 - [qb-pokemontcg](https://github.com/KamuiKody/qb-pokemontcg)
+- 
